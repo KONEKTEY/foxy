@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Carousel autoplay perPage=3 loop class="services-carousel owl-theme">
+        <Carousel autoplay :perPage="slideNumber" c loop class="services-carousel owl-theme">
           <Slide class="services-block">
             <iframe width="299" height="210" src="https://www.youtube.com/embed/wd9TwS1FoGs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </Slide>
@@ -29,7 +29,7 @@
         <div class="section-title text-center">
             <h2>COLORS</h2>
         </div>
-        <Carousel autoplay perPage=3 loop class="services-carousel owl-theme">
+        <Carousel autoplay :perPage="slideNumber" loop class="services-carousel owl-theme">
           <Slide class="services-block">
             <iframe width="299" height="210" src="https://www.youtube.com/embed/JDVxEzux39E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </Slide>
@@ -52,7 +52,7 @@
         <div class="section-title text-center">
             <h2>SINGLES</h2>
         </div>
-        <Carousel autoplay perPage=3 loop class="services-carousel owl-theme">
+        <Carousel autoplay :perPage="slideNumber" loop class="services-carousel owl-theme">
           <Slide class="services-block">
             <iframe width="299" height="210" src="https://www.youtube.com/embed/oz6GNq1UXnE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </Slide>
@@ -82,7 +82,10 @@ export default {
   components:{
     Carousel,
     Slide
-  }
+  },
+  props: {
+    slideNumber: Number,
+  },
 }
 </script>
 
